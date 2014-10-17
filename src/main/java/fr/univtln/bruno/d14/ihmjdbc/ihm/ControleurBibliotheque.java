@@ -66,8 +66,9 @@ public class ControleurBibliotheque {
         try {
             //L'ajout d'un auteur est délégué au modèle.
             modeleBibliotheque.ajouterAuteur(
-                    prenomNouvelAuteurModel.getText(0, prenomNouvelAuteurModel.getLength()),
-                    nomNouvelAuteurModel.getText(0, nomNouvelAuteurModel.getLength()));
+                    nomNouvelAuteurModel.getText(0, nomNouvelAuteurModel.getLength()),
+                    prenomNouvelAuteurModel.getText(0, prenomNouvelAuteurModel.getLength())
+            );
         } catch (BadLocationException e) {
             e.printStackTrace();
         } catch (PersistanceException e) {
