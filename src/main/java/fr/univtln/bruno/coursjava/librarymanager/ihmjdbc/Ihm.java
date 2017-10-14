@@ -1,9 +1,9 @@
-package fr.univtln.bruno.d14.ihmjdbc;
+package fr.univtln.bruno.coursjava.librarymanager.ihmjdbc;
 
-import fr.univtln.bruno.d14.ihmjdbc.exceptions.ConfigImportException;
-import fr.univtln.bruno.d14.ihmjdbc.ihm.VueBibliotheque;
-import fr.univtln.bruno.d14.ihmjdbc.model.ModelBibliotheque;
-import fr.univtln.bruno.d14.ihmjdbc.utils.ConfigReader;
+import fr.univtln.bruno.coursjava.librarymanager.ihmjdbc.exceptions.ConfigImportException;
+import fr.univtln.bruno.coursjava.librarymanager.ihmjdbc.ihm.VueBibliotheque;
+import fr.univtln.bruno.coursjava.librarymanager.ihmjdbc.model.ModelBibliotheque;
+import fr.univtln.bruno.coursjava.librarymanager.ihmjdbc.utils.ConfigReader;
 
 /**
  * Created by bruno on 16/10/14.

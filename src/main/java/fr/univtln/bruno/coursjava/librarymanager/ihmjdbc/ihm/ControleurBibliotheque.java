@@ -1,8 +1,8 @@
-package fr.univtln.bruno.d14.ihmjdbc.ihm;
+package fr.univtln.bruno.coursjava.librarymanager.ihmjdbc.ihm;
 
-import fr.univtln.bruno.d14.ihmjdbc.exceptions.PersistanceException;
-import fr.univtln.bruno.d14.ihmjdbc.model.ModelBibliotheque;
-import fr.univtln.bruno.d14.ihmjdbc.model.entities.Auteur;
+import fr.univtln.bruno.coursjava.librarymanager.ihmjdbc.exceptions.PersistanceException;
+import fr.univtln.bruno.coursjava.librarymanager.ihmjdbc.model.ModelBibliotheque;
+import fr.univtln.bruno.coursjava.librarymanager.ihmjdbc.model.entities.Auteur;
 
 import javax.swing.event.DocumentEvent;
 import javax.swing.event.DocumentListener;

@@ -1,12 +1,11 @@
-package fr.univtln.bruno.d14.ihmjdbc.utils;
+package fr.univtln.bruno.coursjava.librarymanager.ihmjdbc.utils;
 
-import fr.univtln.bruno.d14.ihmjdbc.exceptions.ConfigImportException;
+import fr.univtln.bruno.coursjava.librarymanager.ihmjdbc.exceptions.ConfigImportException;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.nio.charset.Charset;
-import java.util.Properties;
 import java.util.logging.LogManager;
 import java.util.logging.Logger;
 

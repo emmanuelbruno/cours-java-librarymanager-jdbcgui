@@ -1,8 +1,8 @@
-package fr.univtln.bruno.d14.ihmjdbc.model.entities;
+package fr.univtln.bruno.coursjava.librarymanager.ihmjdbc.model.entities;
 
-import fr.univtln.bruno.d14.ihmjdbc.exceptions.PersistanceException;
-import fr.univtln.bruno.d14.ihmjdbc.model.Entity;
-import fr.univtln.bruno.d14.ihmjdbc.utils.DatabaseManager;
+import fr.univtln.bruno.coursjava.librarymanager.ihmjdbc.utils.DatabaseManager;
+import fr.univtln.bruno.coursjava.librarymanager.ihmjdbc.exceptions.PersistanceException;
+import fr.univtln.bruno.coursjava.librarymanager.ihmjdbc.model.Entity;
 
 import java.io.Serializable;
 import java.sql.*;
@@ -22,6 +22,7 @@ public class Auteur implements Serializable, Entity {
     //En cas de recherche, ils sont recherchés ici en premier
     //ATTENTION, l'implantation proposée ici est SIMPLISTE
     //Les objets ne sont retirés que lorsqu'ils sont supprimés de la base.
+    //A VOIR : https://github.com/redisson/redisson
     private static Map<Integer, Auteur> cacheAuteurs = new HashMap<>();
 
     private static Logger logger = Logger.getLogger(Auteur.class.getName());

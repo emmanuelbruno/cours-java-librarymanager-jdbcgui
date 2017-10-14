@@ -1,4 +1,4 @@
-package fr.univtln.bruno.d14.ihmjdbc;
+package fr.univtln.bruno.coursjava.librarymanager.ihmjdbc;
 
 import junit.framework.Test;
 import junit.framework.TestCase;

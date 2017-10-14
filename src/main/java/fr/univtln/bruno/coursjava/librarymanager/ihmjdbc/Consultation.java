@@ -1,13 +1,11 @@
-package fr.univtln.bruno.d14.ihmjdbc;
+package fr.univtln.bruno.coursjava.librarymanager.ihmjdbc;
 
 
-import fr.univtln.bruno.d14.ihmjdbc.exceptions.ConfigImportException;
-import fr.univtln.bruno.d14.ihmjdbc.exceptions.PersistanceException;
-import fr.univtln.bruno.d14.ihmjdbc.model.EntityManager;
-import fr.univtln.bruno.d14.ihmjdbc.model.entities.Auteur;
-import fr.univtln.bruno.d14.ihmjdbc.utils.ConfigReader;
-
-import java.util.logging.LogManager;
+import fr.univtln.bruno.coursjava.librarymanager.ihmjdbc.exceptions.ConfigImportException;
+import fr.univtln.bruno.coursjava.librarymanager.ihmjdbc.exceptions.PersistanceException;
+import fr.univtln.bruno.coursjava.librarymanager.ihmjdbc.model.EntityManager;
+import fr.univtln.bruno.coursjava.librarymanager.ihmjdbc.model.entities.Auteur;
+import fr.univtln.bruno.coursjava.librarymanager.ihmjdbc.utils.ConfigReader;
 
 /**
  * Cette classe permet de consulter la relation AUTEUR dans la base de données.

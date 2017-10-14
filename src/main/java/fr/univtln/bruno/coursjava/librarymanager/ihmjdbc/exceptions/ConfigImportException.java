@@ -1,4 +1,4 @@
-package fr.univtln.bruno.d14.ihmjdbc.exceptions;
+package fr.univtln.bruno.coursjava.librarymanager.ihmjdbc.exceptions;
 
 /**
  * Created by bruno on 16/10/14.

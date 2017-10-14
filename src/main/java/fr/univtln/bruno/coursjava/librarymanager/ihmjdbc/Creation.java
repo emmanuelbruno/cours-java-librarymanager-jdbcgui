@@ -1,14 +1,15 @@
-package fr.univtln.bruno.d14.ihmjdbc;
+package fr.univtln.bruno.coursjava.librarymanager.ihmjdbc;
 
-import fr.univtln.bruno.d14.ihmjdbc.exceptions.ConfigImportException;
-import fr.univtln.bruno.d14.ihmjdbc.exceptions.PersistanceException;
-import fr.univtln.bruno.d14.ihmjdbc.model.EntityManager;
-import fr.univtln.bruno.d14.ihmjdbc.model.entities.Auteur;
-import fr.univtln.bruno.d14.ihmjdbc.utils.ConfigReader;
-import fr.univtln.bruno.d14.ihmjdbc.utils.DatabaseManager;
+import fr.univtln.bruno.coursjava.librarymanager.ihmjdbc.exceptions.ConfigImportException;
+import fr.univtln.bruno.coursjava.librarymanager.ihmjdbc.exceptions.PersistanceException;
+import fr.univtln.bruno.coursjava.librarymanager.ihmjdbc.model.EntityManager;
+import fr.univtln.bruno.coursjava.librarymanager.ihmjdbc.model.entities.Auteur;
+import fr.univtln.bruno.coursjava.librarymanager.ihmjdbc.utils.ConfigReader;
+import fr.univtln.bruno.coursjava.librarymanager.ihmjdbc.utils.DatabaseManager;
 
 import java.sql.Connection;
 import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.Arrays;
 import java.util.List;
 
@@ -31,13 +32,14 @@ public class Creation {
 
         //Utilisation de l'entity manager pour ajouter tous les auteurs dans UNE SEULE transaction.
         EntityManager entityManager = EntityManager.getInstance();
-
+        Connection connection = null;
+        Statement createStatement = null;
         try {
             entityManager.setAutoCommit(false);
 
-            Connection connection = DatabaseManager.getConnection();
-            connection.createStatement().executeUpdate(ddl);
-            DatabaseManager.releaseConnection(connection);
+            connection = DatabaseManager.getConnection();
+            createStatement = connection.createStatement();
+            createStatement.executeUpdate(ddl);
 
             List<Auteur> auteurs = Arrays.asList(
                     new Auteur.AuteurBuilder().setPrenom("Jean").setNom("Martin").createAuteur(),
@@ -51,6 +53,8 @@ public class Creation {
         } catch (PersistanceException e) {
             System.out.println(e.getException());
         } finally {
+            createStatement.close();
+            DatabaseManager.releaseConnection(connection);
             entityManager.dispose();
         }
 
